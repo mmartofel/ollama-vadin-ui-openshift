@@ -1,6 +1,12 @@
+/**
+ * Simple, in memory, message chat history.
+ *
+ * @author Christian Tzolov
+ * @author Marcus Hellberg (small fixes)
+ */
+
 package dev.tpcoder.devassist.service;
 
-import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.chat.prompt.SystemPromptTemplate;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.VectorStore;
@@ -22,12 +28,6 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-/**
- * Simple, in memory, message chat history.
- *
- * @author Christian Tzolov
- * @author Marcus Hellberg (small fixes)
- */
 @Service
 public class PromptManagementService {
 
