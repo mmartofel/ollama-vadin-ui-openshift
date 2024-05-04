@@ -5,7 +5,7 @@ metadata:
 immutable: false
 data:
   PORT: '8080'
-  AI_OLLAMA_BASE_URL: 'http://ollama-server-service.llama-server.svc.cluster.local:11434'
+  AI_OLLAMA_BASE_URL: 'http://ollama-server-service:11434'
   MODEL: 'mistral'
   TEMPERATURE: '0.4'
   LOG_LEVEL: 'warn'
