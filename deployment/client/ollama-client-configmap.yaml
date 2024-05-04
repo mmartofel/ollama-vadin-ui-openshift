@@ -1,0 +1,12 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: ollama-client-configmap
+immutable: false
+data:
+  SERVER_URL: 'http://llama-server-service.llama-server.svc.cluster.local:8000/v1/'
+  PORT: '8080'
+  AI_OLLAMA_BASE_URL: 'http://ollama-server-service.llama-server.svc.cluster.local:11434'
+  MODEL: 'mistral'
+  TEMPERATURE: '0.7'
+  LOG_LEVEL: 'warn'
