@@ -1,5 +1,5 @@
 resources:
 - ollama-pvc.yaml
-- ollama-deployment.yaml
+- ollama-server-deployment.yaml
 - ollama-server-service.yaml
 - ollama-server-route.yaml
