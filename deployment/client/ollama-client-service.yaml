@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ollama-client-service
+  labels:
+    app: ollama-client
+    app.kubernetes.io/component: ollama-client
+    app.kubernetes.io/instance: ollama-client
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  internalTrafficPolicy: Cluster
+  type: ClusterIP
+  sessionAffinity: None
+  selector:
+    app: ollama-client

@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      name: ollama
+      app: ollama
   template:
     metadata:
       labels:
-        name: ollama
+        app: ollama
     spec:
       volumes:
         - name: ollama-pvc

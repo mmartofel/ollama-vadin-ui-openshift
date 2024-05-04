@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: ollama-client-route
+  labels:
+    app: ollama-client
+    app.kubernetes.io/component: ollama-client
+    app.kubernetes.io/instance: ollama-client
+  annotations:
+spec:
+  to:
+    kind: Service
+    name: ollama-client-service
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect

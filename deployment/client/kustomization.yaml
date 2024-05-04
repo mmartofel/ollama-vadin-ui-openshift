@@ -1,0 +1,5 @@
+resources:
+- ollama-client-configmap.yaml
+- ollama-client-deployment.yaml
+- ollama-client-service.yaml
+- ollama-client-route.yaml
