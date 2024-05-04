@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: ollama-pvc
+  name: ollama-server-pvc
 spec:
   accessModes:
     - ReadWriteOnce

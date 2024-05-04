@@ -13,9 +13,9 @@ spec:
         app: ollama
     spec:
       volumes:
-        - name: ollama-pvc
+        - name: ollama-server-pvc
           persistentVolumeClaim:
-            claimName: ollama-pvc
+            claimName: ollama-server-pvc
       containers:
         - name: ollama
           image: 'ollama/ollama:latest'
@@ -31,7 +31,7 @@ spec:
               cpu: '6'
               memory: 10Gi
           volumeMounts:
-            - name: ollama-pvc
+            - name: ollama-server-pvc
               mountPath: /root/.ollama
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
