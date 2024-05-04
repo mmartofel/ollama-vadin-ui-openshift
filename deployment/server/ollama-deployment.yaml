@@ -23,7 +23,13 @@ spec:
             - name: http
               containerPort: 11434
               protocol: TCP
-          resources: {}
+          resources:
+            limits:
+              cpu: '6'
+              memory: 8Gi
+            requests:
+              cpu: '4'
+              memory: 4Gi
           volumeMounts:
             - name: ollama-pvc
               mountPath: /root/.ollama
