@@ -2,9 +2,12 @@ kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: 'system:openshift:scc:anyuid'
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: "{}"  
 subjects:
   - kind: ServiceAccount
     name: default
+    namespace: ai-ollama-chat-application
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
