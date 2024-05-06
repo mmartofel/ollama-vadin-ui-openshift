@@ -15,7 +15,7 @@ public class RagWorker {
     private final Resource pdfResource;
 
     public RagWorker(VectorStore vectorStore,
-                     @Value("classpath:/rhacm.pdf") Resource pdfResource) {
+                     @Value("classpath:/diabetes.csv") Resource pdfResource) {
         this.vectorStore = vectorStore;
         this.pdfResource = pdfResource;
     }
