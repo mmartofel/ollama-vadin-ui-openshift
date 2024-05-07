@@ -4,6 +4,7 @@ metadata:
   name: ollama
   labels:
     app.kubernetes.io/part-of: OLLAMA_AI_APPLICATION
+    app.openshift.io/runtime: python
 spec:
   replicas: 1
   selector:
