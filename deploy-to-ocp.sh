@@ -12,6 +12,9 @@ oc apply -k ./deployment/project
 oc adm policy add-scc-to-user anyuid -z default -n ai-ollama-chat-application
 sleep 5                          # wait 5s for prooject to create
 
+# set actual project to ai-ollama-chat-application
+oc project ai-ollama-chat-application
+
 echo
 echo 'Creating ollama server pod ...'
 echo 
